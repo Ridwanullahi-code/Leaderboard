@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <header>
+        <h1>Leaderboard</h1>
+    </header>
+    <main>
+        <section class="display-section">
+            <div>
+                <h2>Recent scores</h2>
+                <button class="refresh-btn">Refresh</button>
+            </div>
+            <table class="table">
+            </table>
+        </section>
+        <section class="add-section">
+            <h2>Add your score</h2>
+            <form>
+                <input type="text" name="name" class="name" placeholder="your name">
+                <input type="text" name="score" class="score" placeholder="your score">
+                <input type="button" name="submit" class="submit-btn" value="submit">
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
