@@ -1,4 +1,10 @@
 import '../css/index.css';
-import { displayScore } from './modules/score.js';
+import { display } from './modules/score.js';
+import Refresh from './modules/interaction.js';
+import { clickBtn } from './modules/add.js';
 
-displayScore();
+Refresh.refreshBtn();
+clickBtn();
+
+// Display all todo list when page loaded
+document.addEventListener('DOMContentLoaded', display());

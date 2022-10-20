@@ -1,44 +1,22 @@
-/* disable-default-export */
-
-export const scores = [
-  {
-    name: 'James',
-    score: 200,
-  },
-  {
-    name: 'Alex',
-    score: 100,
-  },
-  {
-    name: 'Chukwuma',
-    score: 150,
-  },
-  {
-    name: 'Tanusri',
-    score: 120,
-  },
-  {
-    name: 'william',
-    score: 65,
-  },
-  {
-    name: 'kevin',
-    score: 90,
-  },
-  {
-    name: 'daniel',
-    score: 33,
-  },
-];
-
-export const displayScore = () => {
-  const table = document.querySelector('.table');
-  const tbody = document.createElement('tbody');
-  scores.forEach((score, index) => {
-    tbody.innerHTML += `
-    <tr class="table-row">
-    <td class="${index + 1}">${score.name}: ${score.score}</td>
-    </tr>`;
-    table.append(tbody);
+export const getScore = async (callback = null) => {
+  const apiKey = '0Z92XESxHIscbuYy2R5g';
+  const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+  const url = `${baseURL}games/${apiKey}/scores/`;
+  const response = await fetch(url);
+  const data = await response.json();
+  const scores = data.result;
+  const sortScores = scores.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
+  sortScores.forEach((score) => {
+    callback(score);
   });
+  return sortScores;
+};
+
+export const displayScore = (score) => {
+  const scores = document.querySelector('.result');
+  scores.innerHTML += `<p>${score.user}: ${score.score}</p>`;
+};
+
+export const display = () => {
+  getScore(displayScore);
 };

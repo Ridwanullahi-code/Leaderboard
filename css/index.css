@@ -18,42 +18,50 @@ main {
   align-items: center;
 }
 
-.display-section {
+section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.display-section div {
-  display: flex;
   gap: 10px;
   align-items: center;
 }
 
+.display-section .recent-score {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+}
+
 .refresh-btn {
-  padding: 2px 2em;
+  padding: 2px 1.5em;
 }
 
-table {
-  border-collapse: collapse;
-  width: 30vw;
-  border: 1px solid grey;
+.result {
+  width: 35vw;
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: column;
 }
 
-table tr:nth-child(even) {
-  background-color: rgba(128, 128, 128, 0.381);
+.result p {
+  padding: 7px;
 }
 
-table tr:hover {
+.result p:nth-child(even) {
+  background-color: grey;
+}
+
+.result p:hover {
   background-color: #ddd;
 }
 
-table td {
-  padding: 3px;
-}
-
 .add-section form {
+  width: 30vw;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.submit-btn {
+  padding: 5px 0;
 }
