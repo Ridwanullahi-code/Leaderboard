@@ -34,6 +34,17 @@ section {
 
 .refresh-btn {
   padding: 2px 1.5em;
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+}
+
+.refresh-btn:hover {
+  opacity: 0.8;
+}
+
+.refresh-btn:active {
+  background-color: rgb(1, 37, 1);
 }
 
 .result {
@@ -64,4 +75,15 @@ section {
 
 .submit-btn {
   padding: 5px 0;
+  border: 1px solid blue;
+  background-color: blue;
+  color: white;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+.submit-btn:active {
+  background-color: rgb(0, 0, 44);
 }
