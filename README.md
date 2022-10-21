@@ -74,4 +74,4 @@ Feel free to check the [issues page](https://github.com/Ridwanullahi-code/Leader
 
 ## **License**
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://choosealicense.com/licenses/mit/LICENSE) licensed.
