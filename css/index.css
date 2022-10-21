@@ -6,9 +6,11 @@
   margin: 0;
   font-family: "Poppins", "Times New Roman", sans-serif;
 }
-header h1{
-  padding:10px;
+
+header h1 {
+  padding: 10px;
 }
+
 main {
   height: 80vh;
   display: flex;
